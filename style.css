@@ -1,0 +1,447 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: #080; /* Dark green background */
+    color: #fff;
+}
+
+/* Header Section */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("certifications/Monster1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container */
+.container {
+    padding: 10px 10%;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Custom Logo Styling */
+.custom-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Click Animation */
+.custom-logo.animate {
+    animation: spin-scale 2s ease-in-out;
+}
+
+/* Keyframes for Animation */
+@keyframes spin-scale {
+    0% {
+        transform: scale(1) rotate(0deg);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        color: #ff004f;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        color: #fff;
+    }
+}
+
+/* Navigation Links */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Bright and Animated Underline */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* Adjust thickness of the underline */
+    background-color: #ff004f; /* Bright color */
+    transition: width 0.4s ease-in-out; /* Animation timing */
+}
+
+/* On Hover: Expand the underline */
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+
+
+/* Logo Styling */
+.logo {
+    font-size: 200px; /* Larger font for emphasis */
+    font-weight: bold;
+    color: #fff; /* White color for visibility */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds spacing between characters */
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow effect */
+}
+
+/* Hover Effect for Logo */
+.logo:hover {
+    color: #ff004f; /* Changes to highlight color on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Animation for Logo Click */
+.logo.animate {
+    animation: logo-spin-scale 2s ease-in-out;
+}
+
+/* Keyframes for Logo Animation */
+@keyframes logo-spin-scale {
+    0% {
+        transform: scale(1) rotate(0deg);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        color: #ff004f;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        color: #fff;
+    }
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+.header-text h1 span {
+    color: #ff004f
+}
+/*----------about---------*/
+#about {
+    padding: 80px 0;
+    color: #ababab
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #ea8118;
+    font-size: 14px;
+
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*----------------services-------------------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.services-list dic i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom:15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+
+}
+#portfolio{
+    padding: 50px 0;
+}
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.work img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+/* General container styles */
+#portfolio {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.work:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.layer {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.work:hover .layer {
+    bottom: 0; /* Slide up effect */
+}
+
+.layer h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.layer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.layer a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.layer a:hover {
+    color: #00aaff; /* Add a hover effect to the link */
+}
+/*-------------    contact  ----------*/
+.contact-left{
+    flex-basis: 35%; 
+}
+.contact-right{
+    flex-basis: 60%; 
+}
+.contact-left p{
+    margin-top: 30p;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size:  30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+/* Base button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Default blue color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Orange color on hover */
+.btn:hover {
+    background-color: orange;
+    color: white; /* Ensure text color stays visible */
+}
+/* General form styling */
+.contact-right form {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    gap: 15px; /* Add space between fields */
+    width: 100%; /* Adjust the form width */
+    max-width: 400px; /* Restrict the form to a specific width */
+    margin: auto; /* Center the form horizontally */
+}
+
+/* Input and textarea styling */
+.contact-right form input,
+.contact-right form textarea {
+    width: 100%; /* Full width within the form */
+    padding: 10px; /* Space inside the fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Comfortable font size */
+}
+
+/* Input and textarea focus state */
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #007BFF; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow */
+}
+
+/* Button styling */
+.square-button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Space inside the button */
+    font-size: 18px; /* Larger text size */
+    font-weight: bold; /* Bold text */
+    color: white; /* Text color */
+    background-color: #007BFF; /* Initial button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+.square-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
